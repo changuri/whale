@@ -1,0 +1,1137 @@
+@charset 'UTF-8';
+
+/* @font-face{
+    font-family: 'NanumSquareRound';
+    src: url(../fonts/NanumSquareRoundL.ttf);
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'NanumSquareRound';
+    src: url(../fonts/NanumSquareRounR.ttf);
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'NanumSquareRound';
+    src: url(../fonts/NanumSquareRoundB.ttf);
+    font-weight:700;
+}
+@font-face{
+    font-family: 'NanumSquareRound';
+    src: url(../fonts/NanumSquareRoundEB.ttf);
+    font-weight: 800;
+} */
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #000; }
+li{list-style: none;}
+button{background: none; border: none;}
+span{display: inline-block;}
+input{font-family: 'NanumSquareRound',sans-serif;}
+.blind{font-size:0; position: absolute; left:-9999px; text-indent: -9999px;}
+body{font-family: 'NanumSquareRound',sans-serif;}
+.icon{background-image: url(../img/sprite.png);  display: inline-block;
+      background-size: 1100px 600px;
+}
+
+/* 버튼 */
+.bigButton{
+    width: 320px; height: 40px;
+    border-radius: 20px;
+    background: #7c88ff; color: #fff;
+    font-size: 16px; font-weight: bold;
+}
+.midButton{
+    width: 150px; height: 40px;
+    border-radius: 20px;
+    background: #7c88ff; color: #fff;
+    font-size: 16px; font-weight: bold;
+    margin: 10px 5px 0;
+}
+/* input */
+input{
+    height: 40px; border-radius: 20px;
+    background: #fff;
+    border: none;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+/* ================================== header ===================================  */
+/* 오프닝 페이지 ==================================================================*/
+.opening{
+    /* display: none;     */
+    height: 100vh;
+    background: url(../img/openingBg.jpg) no-repeat center;
+    background-size: cover;     
+}
+.ani{
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 50%; transform: translatex(-50%);    
+    top: 25%;   
+    animation: open 5s;  
+    overflow: hidden; 
+    position: relative;
+}
+@keyframes open{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.ani .icon-five{
+    width: 200px; height: 80px;
+    background-position: 0 0;
+}
+.ani .icon-mainlogo{
+    position: absolute;
+    top: 0;
+    width: 200px; height: 200px;
+    background-position: -200px -90px ;
+}
+.ani .icon-music{
+    position: absolute;
+    top: 0;
+    width: 400px; height: 200px;
+    background-position: -410px -90px ;
+    animation: flow 4s infinite linear ;      
+}
+@keyframes flow{
+    from{left: 0px;}
+    to{left: -180px;}
+}
+.ani img{
+    position: absolute; top:0; left: 0;
+    width:  100%
+}
+.opening .icon-mainTitle{
+    position: absolute;
+    left: 50%; transform: translatex(-50%);
+    bottom: 30%;  
+    width: 194px; height: 56px;
+    background-position: 0px -310px ;
+    animation: open 5s;  
+}
+/* 로그인 페이지 ==================================================================*/
+.login{
+    display: none;
+    height: 100vh;
+    background: url(../img/loginBg.jpg) no-repeat center;
+    background-size: cover; 
+    position: relative;
+    text-align: center;
+}
+.login .loginImg{text-align: left;}
+.login .icon-loginImg{
+    width: 180px; height: 193px;
+    background-position: 0 -407px;
+    margin: 40px 30px;    
+}
+.login .loginBox{margin: 20px 0;}
+.login .loginSns {overflow: hidden; display: inline-block;}
+.login .loginSns li{
+    float: left;
+    margin: 15px 10px;
+}
+.login .loginSns li a{display: inline-block;}
+.login .loginSns .icon{
+    width: 40px; height: 41px;
+}
+.login .loginSns .icon-facebookW{background-position: -910px 0px;}
+.login .loginSns .icon-kakaoW{background-position: -960px 0px;}
+.login .loginSns .icon-naverW{background-position: -1010px 0px;}
+.login .loginSns .icon-googleW{background-position: -1060px 0px;}
+
+.login .loginForm input{
+    width: 320px;     
+    background: rgba(225, 225, 225, 0.5);
+    display: block; margin: 10px auto;
+}
+.login .loginForm p{color: #fff; font-size: 14px;}
+.login .loginButton{
+    background: #fdca6e;
+    color: #6d5ce8;
+    margin-top: 10px;
+}
+.login .loginBtng{
+    position: absolute; padding: 0 20px;
+    bottom: 30px; 
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+.login .loginBtng a{
+    font-weight: bold; color: #fff; display: inline-block; padding: 10px;
+}
+.login .loginBtng a:last-child{
+    position: absolute;
+    right: 20px;
+}
+/* 암호 입력 페이지 =============================================================== */
+.code-page{    
+    display: none;
+    height: 100vh;
+    background: url(../img/loginBg.jpg) no-repeat center;
+    background-size: cover; 
+    position: relative;
+    text-align: center;
+}
+.code-page .icon-codeImg{
+    width: 180px; height: 193px;
+    background-position: -190px -407px;
+    margin: 100px 0;
+}
+.code-page .codeBox h2{
+    font-size: 20px;
+    color: #fff;    
+}
+.code-page .codeBox ul{overflow: hidden; display: inline-block;}
+.code-page .codeBox li{
+    float: left; margin: 20px 5px;
+    position: relative;
+}
+.code-page .codeBox input{
+    width: 50px; height: 50px;
+    border-radius: 25px;    
+    text-align: center;
+    font-size: 20px;
+}
+.code-page .codeBox p{
+    color: #fff;
+    font-size: 14px;
+}
+.code-page .codeBox .icon-whalePs{
+    width: 50px; height: 50px;
+    background-position: -200px 0;
+    position: absolute; top: 0;
+}
+.code-page .btnNum{
+    display: none;
+}
+.code-page .btnNum{ margin-top: 50px;}
+.code-page .btnNumg button{
+    font-size: 35px; padding: 20px 40px; font-weight: 700; color: #fff;
+}
+.code-page .btnNumg .text{font-size: 18px; vertical-align: top; padding: 30px;}
+/* 회원가입 팝업================================================================= */
+.singUp{
+    display: none;
+    height: 100vh;
+    background: url(../img/signinBg.jpg) no-repeat center;
+    background-size: cover; 
+    position: relative;
+    text-align: center;
+}
+
+.singUp .fa-times{
+    position: absolute;
+    left: 30px; top: 40px;   
+}
+.singUp h2{ padding: 40px 0; font-size: 20px;}
+.singUp p{color: #7c88ff; font-weight: bold; }
+.singUp .singUpSns {overflow: hidden; display: inline-block;}
+.singUp .singUpSns li{float: left; margin: 10px;}
+.singUp .singUpSns li a{display: inline-block;}
+.singUp .singUpSns .icon{width: 40px; height: 42px;}
+.singUp .singUpSns .icon-facebookP{background-position: -910px -45px}
+.singUp .singUpSns .icon-kakaoP{background-position: -960px -45px}
+.singUp .singUpSns .icon-naverP{background-position: -1010px -45px}
+.singUp .singUpSns .icon-googleP{background-position: -1060px -45px}
+
+.singUp .singUpNic{margin: 30px 0;}
+.singUp .singUpNic button{
+    width: 100px; height: 40px;
+    border-radius: 20px;
+    background: #7c88ff; color: #fff;
+    font-size: 16px; font-weight: bold;
+}
+.singUp .singUpNic input{
+    width: 210px; height: 40px;   
+}
+.singUp .singUpInfo .text{font-size: 14px; margin: 20px 0;}
+.singUp .singUpInfo{width: 320px; margin: auto;}
+.singUp .singUpInfo input{
+    width: 100%; height: 40px;
+}
+
+/* ID/PW찾기 팝업===================================================== */
+.forgot-popup{
+    display: none; 
+    height: 100vh;
+    background: url(../img/signinBg.jpg) no-repeat center;
+    background-size: cover; 
+    position: relative;
+}
+.forgot-popup .fa-times{
+    position: absolute;
+    left: 30px; top: 40px;
+}
+.forgot-popup .wrap{padding: 100px 0 0px;}
+.forgot-popup .wrap h2{
+    text-align: left;
+    margin: 10px 20px;
+    font-size: 20px;
+}
+.forgot-popup .wrap p{
+    margin: 10px 20px;    
+    font-size: 14px;
+}
+.forgot-popup .wrap .textBox{ width: 320px;  margin: auto;}
+.forgot-popup .wrap input{width:100%;}
+
+/*회원가입/ID/PW찾기 알림 팝업=======================================  */
+.loginsubPopup-area{
+    display: none;
+    text-align: center;
+}
+.popup-bg{    
+    height: 100%; width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    background-size: cover; 
+    position: fixed;  
+    top:0;  
+}
+.loginsubPopup-area p{ font-size: 16px; margin: 10px 0;}
+.loginsubPopup-area .popup{
+    width: 100%;
+    background: #fff;
+    padding: 40px 0;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 로그인 완료 */
+.loginCheck-popup{
+    display: none; 
+}
+/* 아이디 찾기 */
+.forgotId-popup{
+    display: none;     
+}
+/* 패스워드 찾기 */
+.forgotPw-popup{
+    display: none;     
+}
+/* 비밀번호 입력오류 */
+.forgotCode-popup{
+    display: none;   
+}
+/* ============================= main =============================  */
+/*  ============================= nav ============================= */
+nav{
+    padding: 15px 20px;
+    position: fixed;
+    top: 0; left: 0;
+    height: 50px; width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 100;
+} 
+nav .logo{
+    position: absolute;
+    left: 50%; top: 8px;
+    transform: translateX(-50%);
+} 
+nav .icon-logoB{
+    width: 50px; height: 32px;
+    background-position: -320px 0;
+}
+nav .mainMenu{
+    position: relative;
+}
+nav .mainMenu .fas{font-size:1.3em}
+nav .mainMenu a:last-child{
+    position: absolute;
+    right: 0px;
+}
+/* =============================nav 팝업=============================  */
+/* nav 메뉴 팝업*/
+.nav-popup {
+    /* 1095 */
+    display: none;
+    position: fixed;  
+    height: 100vh; width: 100%;
+    top: 0; left:0;
+    /* background: rgba(0, 0, 0, 0.5);    */
+    z-index: 100;
+}
+.nav-popupBg{
+    display: none;
+    position: fixed;  
+    height: 100vh; width: 100%;
+    top: 0; left:0;
+    background: rgba(0, 0, 0, 0.5);   
+}
+/* nav 메인 메뉴 팝업====================================================== */
+.nav-popup .menu-popup{
+    display: none;
+    background: #fff;
+    width: 75%; height: 100vh;
+    overflow-y: scroll; 
+    position: relative;
+}
+.nav-popup .submenu{
+    display: none;
+}
+.nav-popup .personalInfo{
+    width: 100%; height: 130px;
+    background: #fff3b1;
+    padding: 30px 30px;
+    box-sizing: border-box;  
+    overflow: hidden; 
+    position: relative;
+}
+.nav-popup .icon-img{
+    width: 80px; height: 80px; 
+    background-position: -780px 0px;
+    float: left; margin-right: 10px;
+}
+.nav-popup .personalInfo #camera{
+    position: absolute;
+    bottom: 20px; left: 90px;
+}
+.nav-popup .icon-camera{
+    width: 25px; height: 25px; 
+    background-position: -865px 0px;   
+}
+.nav-popup h3{
+    position: absolute;
+    right: 30px; bottom: 30px;
+}
+.nav-popup .menu{
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+.nav-popup .menu .menuList{
+    font-size: 20px; font-weight: 700;
+    position: relative; height: 60px;
+}
+.nav-popup .menu .menuList a{
+    line-height: 60px;
+    display: inline-block;
+    width: 100%;     
+}
+.nav-popup .menu .menuList .fas{
+   position: absolute;
+   right: 0; line-height: 60px;
+}
+.nav-popup .menu .menuList a.active i{
+    transform: rotateX(180deg);
+}
+.nav-popup .menu li ul li{
+    overflow: hidden; height: 40px; line-height: 40px;
+    position: relative;
+}
+.nav-popup .menu span{font-size: 14px; float: left; }
+
+.nav-popup .submenu .select{ 
+    position: absolute; right: 0; line-height: 40px;
+}
+.nav-popup .submenu .select a{
+    display: inline-block;    
+    margin-left: 10px; vertical-align: middle;
+    box-sizing: border-box;
+}
+.nav-popup .submenu .color a:first-child{
+    width: 25px;  height: 25px; border-radius: 50%;
+    background: #fff; border: 3px solid #7c88ff;
+}
+.nav-popup .submenu .color a:last-child{
+    width: 25px;  height: 25px; border-radius: 50%;
+    background: #7c88ff; border: 3px solid #7c88ff;
+}
+.nav-popup .submenu .color a.on{ border: 3px solid #fdca6e}
+
+.nav-popup .submenu .thema .icon{width: 25px; height: 25px;}
+.nav-popup .submenu .thema .icon-list{background-position: -935px -530px}
+.nav-popup .submenu .thema .icon-infoGraph{background-position: -935px -500px}
+
+.nav-popup .submenu .thema .icon-list.on{background-position: -905px -530px}
+.nav-popup .submenu .thema .icon-infoGraph.on{background-position: -905px -500px}
+
+.nav-popup .whaleInfo{
+    padding: 100px 20px 20px; overflow: hidden;
+}
+.nav-popup .whaleInfo .wrap{display: inline-block;}
+.nav-popup .whaleInfo .icon-logoP{
+    width: 50px; height: 30px; background-position: -380px -0px;
+    float: left; margin: 10px;
+}
+.nav-popup .whaleInfo .icon-logoT{width: 57px; height: 16px; background-position: -620px -0px}
+.nav-popup .whaleInfo p{font-size: 12px; font-weight: 800;}
+
+/* on-off 스위치 */
+.switch{display: inline-block; position: absolute; right:5px;}
+.switch input{display: none;}
+.switch .on-off{
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #7c88ff  ; 
+    width: 40px; height: 18px;            
+    border-radius: 20px;            
+    position: relative;     
+    box-sizing: border-box;
+    transition: 0.5s;           
+}
+.switch .on-off span{
+    position: absolute;
+    display: inline-block;
+    position: absolute;    
+    color: #7c88ff; 
+    top:50%; transform: translateY(-50%);
+    transition: 0.5s;                      
+}
+.switch .on-off span.btn{      
+    position: absolute;     
+    width: 25px; height: 25px;
+    background: #7c88ff; right: -5px;           
+    border-radius: 50%;            
+   
+}
+.switch input:checked+label{
+    background: #7c88ff78; border: none;
+}
+.switch input:checked+label span.btn{
+    position: absolute;
+    width: 25px; height: 25px;
+    background: #7c88ff; left: -5px;  
+    border-radius: 50%;          
+}
+
+/* 암호 설정 팝업 ========================================================= */
+.nav-popup .code-popup{
+    display: none;
+    background: #fff;
+    text-align: center;
+    position: fixed; top:0;
+    width: 100%; height: 100%;   
+}
+.nav-popup .code-popup .wrap .fa-chevron-left{
+    position: absolute;
+    left: 30px; top: 40px;
+}
+.nav-popup .code-popup .wrap h2{ padding: 40px 0; font-size: 20px;}
+.nav-popup .code-popup .code{text-align: center; display: inline-block;}
+.nav-popup .code-popup .wrap .code{margin: 20px; overflow: hidden;}
+.nav-popup .code-popup .wrap .code li{
+    background-position:  -255px 0;
+    width: 50px; height: 30px;    
+    margin: 20px 10px; float: left;
+}
+.nav-popup .code-popup .wrap .code li.active{
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: #fdca6e;
+    margin: 10px;
+}
+.code-popup .btnNum{ margin-top: 50px;}
+.code-popup .btnNum button{
+    font-size: 35px; width: 30%; font-weight: 700; color: #494949; padding: 20px;
+}
+.code-popup .btnNum .text{font-size: 18px; vertical-align: top; padding: 30px;}
+
+.nav-popup .codeSetting{
+    display: none;   
+}
+.nav-popup .codeSetting-check{
+    display: none;
+}
+
+/* 새 목표 추가 ============================================================ */
+.nav-popup .new-popup{
+    display: none;
+    background: url(../img/signinBg.jpg)no-repeat center;
+    background-size: cover; 
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    padding: 0 20px; font-size: 14px;
+}
+.nav-popup .new-popup .wrap .fa-chevron-left{
+    position: absolute;
+    left: 30px; top: 30px; font-size: 1.3em;
+}
+.nav-popup .new-popup .wrap h2{ padding: 30px 0; font-size: 20px;}
+.nav-popup .new-popup form{ width: 320px; margin: auto;}
+.nav-popup .new-popup input{width:100% }
+.nav-popup .new-popup .sliderArea{width: 320px; margin: auto;}
+.nav-popup .new-popup .sliderArea p{ 
+    font-weight: 700; text-align: left; margin: 10px;
+}
+/* 슬라이더 */
+.nav-popup .sliderArea .slider{margin: 30px 20px 60px;}  
+.nav-popup .sliderArea .slider::before{
+    content: '';
+    position: absolute; left:-3px; margin-top:-3px;
+    width: 10px; height: 10px; border-radius: 50%; 
+    border: 0; box-shadow:none; background:#fdca6e;
+}    
+.nav-popup .sliderArea .slider::after{
+    content: '';
+    position: absolute; right:-3px; margin-top:-3px;
+    width: 10px; height: 10px; border-radius: 50%; 
+    border: 0; box-shadow:none; background:#fdca6e;
+} 
+.ui-slider-handle {
+    /* width: 3em; */
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.4em;
+    text-align: center;
+    line-height: 1.6em;
+    border: 0;
+    font-size: 22px;
+    color: #6d5ce8;
+    background: transparent;     
+}
+.ui-slider-handle::after{
+    content: '';
+    position: absolute; right:-16px; margin-top:30px; top:0;
+    width: 50px; height: 30px;
+    background-image: url(../sprite.png);  display: inline-block;
+    background-size: 1100px 600px;
+    background-position: -380px 0; 
+}
+.ui-widget-content{
+    border: none;
+    background: #fdca6e;
+    height: 4px;
+    border-radius: 3px;
+}
+.ui-slider-handle.ui-corner-all.ui-state-default{
+    border: none; color: #6d5ce8;
+    background: transparent; font-weight: 700;
+}
+.ui-widget.ui-widget-content {
+    border: 0;
+}
+.nav-popup .new-popup .tabArea{width: 320px; margin: auto;}
+.nav-popup .new-popup .tabArea ul{overflow: hidden; display: inline-block; width: 100%;}
+.nav-popup .new-popup .tabArea li{
+    float: left;    width: 50%;     
+}
+.nav-popup .new-popup .tabArea a{
+    display: inline-block;  
+    width: 100%; line-height: 40px;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 3px solid #fdca6e;
+    background: transparent;
+    box-sizing: border-box;  
+    line-height: 40px;
+    height: 40px; 
+    font-size: 16px; font-weight: 800; color: #6d5ce8;   
+}
+.nav-popup .new-popup .tabArea a.on{
+    border: 3px solid #fdca6e;
+    border-bottom: 0;    
+}
+.nav-popup .new-popup .tab-info{
+    padding: 10px 0;
+}
+.nav-popup .new-popup .tab-info .add{
+    color: #6d5ce8;
+}
+.nav-popup .new-popup .tab-info #tabA{
+    /* display: none; */
+}
+.nav-popup .new-popup .tab-info #tabT{
+    display: none;
+}
+.nav-popup .new-popup .bigButton{
+    position: absolute; bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 목표 수정 ======================================================== */
+.nav-popup .revision-popup{
+    display: none;
+    background: url(../img/signinBg.jpg)no-repeat center;
+    background-size: cover; 
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    padding: 0 20px; font-size: 14px;
+}
+.nav-popup .revision-popup .wrap .fa-chevron-left{
+    position: absolute;
+    left: 30px; top: 30px; font-size: 1.3em;
+}
+.nav-popup .revision-popup .sliderArea{text-align: left;}
+.nav-popup .revision-popup .wrap h2{ padding: 30px 0; font-size: 20px;}
+.nav-popup .revision-popup form{width: 320px; margin: auto; }
+.nav-popup .revision-popup form input:nth-child(2){margin-bottom: 30px;}
+.nav-popup .revision-popup input{width:100% }
+.nav-popup .revision-popup p{margin: 20px}
+
+
+/* 기타 nav 안 팝업 ====================================================== */
+/* 공통 */
+.nav-popup .menu-subpopup{
+    /* display: none; */
+    text-align: center;
+}
+.nav-popup .menu-subpopup .menu-subpopupBg{
+    display: none;
+    position: fixed;
+    height: 100%; width: 100%; 
+    top: 0; left:0;
+    background: rgba(0, 0, 0, 0.5);  
+}
+.nav-popup .menu-subpopup p{ font-size: 16px; margin: 10px 0;}
+.nav-popup .menu-subpopup .popup{
+    width: 100%;
+    background: #fff;
+    padding: 40px 0;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 카메라 팝업 */
+.nav-popup .cameraPopup1{
+    display: none; 
+}
+.nav-popup .cameraPopup2{
+    display: none;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    position: fixed; 
+    bottom: 0;  
+}
+.nav-popup .cameraPopup2 .wrap{padding: 40px 0; width: 320px; margin: auto;}
+.nav-popup .cameraPopup2 .bigButton.yellow{
+    background: #fff3b1;
+    color: #000;    
+}
+.nav-popup .cameraPopup2 .bigButton{margin: 5px 0;}
+/* 로그아웃 팝업 */
+.nav-popup .logoutPopup{
+    display: none; 
+}
+/* 암호 확인 팝업 */
+.nav-popup .codeCheckPopup, .nav-popup .codeCheckPopup2{
+    display: none;
+}
+
+/* =========================== section =============================*/
+section{    
+    position: relative; top: 50px;
+}
+/* 슬라이드 */
+.mainSwiper .swiper-pagination{
+    position: absolute; top:15px;
+}
+.mainSwiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #6d5ce8;
+}
+.mainSwiper .swiper-pagination{
+    height: 10px;
+}
+/* new 첫목표 페이지 ================================================ */
+.new{
+    text-align: center;
+}
+.new .icon-new{
+    width: 250px; height: 252px;
+    background-position: -400px -290px;
+    margin: 50px 0;
+}
+.new h2{line-height: 20px; line-height: 30px;}
+
+/* Progress 공통 ================================================== */
+/* 메인 progress영역 */
+/* 슬아이드 업 */
+.infoArea{text-align: center;}
+/* .infoArea *{transition: 0.3s} */
+.infoArea .mainProgress{
+    margin-top: 30px;
+}  
+.infoArea .mainProgress text tspan{
+    font-size: 60px; font-weight: 700; 
+}
+.infoArea .textBox{
+    position: relative;
+    height: 250px;  
+}
+.infoArea .textBox .wrap .title{
+    margin: 10px 0;
+}
+.infoArea .textBox .wrap .icon-line{
+   width: 60px; height: 10px; 
+   background-position: -1013px -382px;
+}
+.infoArea .textBox .wrap p{
+    color: #6d5ce8; font-size: 12px; font-weight: 800; display: inline;
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
+}
+.infoArea .textBox .wrap strong{
+    font-size: 20px; font-weight: 800;
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
+}
+.infoArea .textBox .wrap .rule p{ 
+    color: #000; font-size: 16px; font-weight: 400;
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
+    display: block;
+}
+.infoArea .textBox .fa-pen{
+    display: none;
+} 
+.perfect ul{overflow: hidden; display: inline-block;}
+.perfect li{float: left; margin: 0 15px;}
+.perfect li a{display: inline-block;}
+.perfect .icon{width: 40px; height: 42px;}
+.perfect .icon-facebookP{background-position: -910px -45px}
+.perfect .icon-kakaoP{background-position: -960px -45px}
+.perfect .icon-urlP{background-position: -865px -45px}
+
+/* 슬라이드 다운 */
+.infoArea.scroll{
+    overflow: hidden; padding: 10px 20px;   
+    width: 100%; height: 120px;
+    box-sizing: border-box;
+    text-align: left;    
+    position: fixed; top: 120px;
+    background: #fff;     z-index: 100;
+}
+.infoArea.scroll .mainProgress{
+    /* width: 100px; height: 100px;
+    border-radius: 50%; */
+    float: left; margin: 0;
+}
+.infoArea.scroll .mainProgress{
+    transform: scale(.4);
+    position: absolute; 
+    left: -80px; top: -90px;
+} 
+
+.infoArea.scroll .textBox{
+    position: absolute;
+    width: 200px; height: 100px;
+    margin-left: 20px;
+    display: inline-block; right: 20px;
+}
+.infoArea.scroll .textBox .wrap .title{
+    display: none;
+}
+.infoArea.scroll .textBox .wrap p{
+    color: #6d5ce8; font-size: 12px; font-weight: 800; display: inline;
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
+}
+.infoArea.scroll .textBox .wrap strong{
+    font-size: 14px; font-weight: 800;
+    margin-bottom: 10px;  display: block;
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
+}
+.infoArea.scroll .textBox .wrap .rule p{ 
+    color: #000; font-size: 14px; font-weight: 400;
+    display: block;
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
+}
+.infoArea.scroll .textBox .fa-pen{
+    display: block;
+    color: #6c6c6c;
+    position: absolute; right: 0;  top: 0; 
+} 
+.infoArea.scroll .perfect ul{overflow: hidden; display: inline-block;}
+.infoArea.scroll .perfect li{float: left; margin: 0 10px 0 0;}
+.infoArea.scroll .perfect li a{display: inline-block;}
+.infoArea.scroll .perfect .icon{width: 40px; height: 42px;}
+.infoArea.scroll .perfect .icon-facebookP{background-position: -910px -45px}
+.infoArea.scroll .perfect .icon-kakaoP{background-position: -960px -45px}
+.infoArea.scroll .perfect .icon-urlP{background-position: -865px -45px}
+.bottomArea{
+    padding-top: 230px;
+}
+/* personal area */
+.menuArea{text-align: center; padding-top: 230px;}
+.menuArea .icon-bigline{
+    width: 340px; height: 20px;
+    background-position: -760px -570px;
+} 
+.menuArea ul{overflow: hidden; display: inline-block;}
+.menuArea li{float: left; margin: 0 45px;}
+.menuArea .fas{font-size: 1.8em; color:#6c6c6c;}
+
+/* 리스트 */
+.personalProgress{
+    margin: 0 20px; text-align: center;
+}
+.personalProgress li{position: relative;}
+.personalProgress .icon-img{
+    width: 50px; height: 52px; 
+    background-position: -550px 0;
+    float: left; margin-right: 10px;
+}
+/* 랭킹 */
+.ranking{
+    width: 30px; height: 30px;
+    position: absolute;
+    left: -8px; top: -8px;
+}
+.icon-one{background-position: -980px -150px;}
+.icon-two{ background-position: -1020px -150px;}
+.icon-three{ background-position: -1060px -150px;}
+
+.personalProgress .nickNmae{
+    font-size: 18px; font-weight: 800;
+    line-height: 52px; text-align: left;
+}
+
+.personalProgress .result{
+    position: absolute;
+    right: 0; top: 35px;
+}
+.personalProgress .progress{
+    clear: both;
+    width: 100%; height: 10px;
+    background: #eeeeef;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.personalProgress .progress .bar{
+    background: #6d5ce8;
+    height: 100%; border-radius: 5px;
+    display: block; width: 0%;
+}
+.personalProgress .progress .bar.me{
+    background: #fdca6e;
+    height: 100%; border-radius: 5px;
+    display: block; width: 0%;
+}
+.personalProgress .icon-bigline{
+    width: 320px; height: 20px;
+    background-position: -770px -570px;
+}
+.personalProgress .stampBox{text-align: center; display: none;}
+.personalProgress .stampBox ul{
+    overflow: hidden; display: inline-block;
+}
+.personalProgress .stampBox li{
+    float: left; height: 42px; width: 20%;
+    margin: 5px 0;
+}
+.personalProgress .stampBox li a{display: inline-block; height: 42px;}
+.personalProgress .stampBox .icon-stamp{
+    width: 50px; height: 42px;
+    background-position: -495px 0;     
+}
+.personalProgress .stampBox .icon-stamp.on{
+    width: 50px; height: 42px;
+    background-position: -438px 0;     
+}
+
+/* progress area 하단(sub) 메뉴 */
+.subMenu{
+    margin: 0 30px;
+    font-size: 16px; font-weight: bold;
+}
+.subMenu a{
+    display: inline-block;
+    height: 60px; width: 100%;   
+    position: relative;
+}
+.subMenu a span{
+    line-height: 60px; font-weight: bold;
+}
+.subMenu .fa-chevron-right{
+    position: absolute;
+    right: 0; line-height: 60px;
+}
+
+
+/* ================== personal progress 페이지 안 중간 메뉴 팝업 ================= */
+/* 공통 */
+.mainPopup-area{  
+    position: fixed; top: 0px; 
+    text-align: center;
+    z-index: 100;
+}
+.mainPopup-area .mainPopup-areaBg{
+    display: none;
+    height: 100%; width:100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed; top: 0px;
+}
+.mainPopup-area .popup{
+    width: 100%;
+    background: #fff;
+    position: fixed; bottom: 0;
+    padding: 0 20px; box-sizing: border-box;
+}
+.icon-lineP{
+    width: 70px; height: 10px; margin-top: 20px;
+    background-position: -915px -355px; 
+    position: absolute;
+    left: 50%; transform: translateX(-50%);                   
+}
+/* 공유 팝업 */
+.mainPopup-area .sharePopup{
+    display: none;
+}
+.mainPopup-area .sharePopup ul{overflow: hidden; margin: 60px 0; display: inline-block;}
+.mainPopup-area .sharePopup li{float: left; margin: 15px;}
+.mainPopup-area .sharePopup ul .icon{ width: 50px; height: 50px; }
+.mainPopup-area .sharePopup .icon-facebookY{background-position: -930px -90px}
+.mainPopup-area .sharePopup .icon-kakaoY{background-position: -990px -90px}
+.mainPopup-area .sharePopup .icon-urlY{background-position: -1050px -90px}
+.mainPopup-area .sharePopup a{display: inline-block;}
+.mainPopup-area .sharePopup li span{
+    font-size: 16px; font-weight: 700; display: block; margin: 10px 0;
+}
+
+/* 친구초대 팝업 */
+.mainPopup-area .friendsAddPopup{
+    display: none;
+}
+.friendsAddPopup .tabArea #tabS{
+    display: none;
+}
+.friendsAddPopup .tabArea #tabAd{
+    display: none;
+}
+.friendsAddPopup .tabArea .tab{
+    overflow: hidden; display: inline-block; width: 100%;
+    margin-top: 60px;   
+}
+.friendsAddPopup .tabArea .tab li{
+    float: left;    width: 50%;     
+}
+.friendsAddPopup .tabArea .tab a{
+    display: inline-block;  
+    width: 100%; line-height: 40px;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 3px solid #fdca6e;
+    background: transparent;
+    box-sizing: border-box;  
+    line-height: 40px;
+    height: 40px; 
+    font-size: 16px; font-weight: 800; color: #6d5ce8;       
+}
+.friendsAddPopup .tabArea .tab a.on{
+    border: 3px solid #fdca6e;
+    border-bottom: 0;    
+}
+.friendsAddPopup .tabArea .search{
+    position: relative;
+}
+.friendsAddPopup .tabArea .search .fas{
+    color: #6d5ce8; 
+    position: absolute; left: 15px; top: 32px;;    
+    font-size: 1.2em;
+}
+.friendsAddPopup .tabArea .search input{
+    background: #dbdcdc; width: 100%;
+    margin: 20px 0; padding-left: 45px;
+}
+.friendsAddPopup .tabArea .friendsList{
+    font-size: 16px; font-weight: 700;
+    height: 160px;
+    overflow-y: scroll;
+}
+.friendsAddPopup .tabArea .friendsList li{
+    position: relative; height: 35px; line-height: 35px;   
+}
+.friendsAddPopup .tabArea .friendsList span{
+    position: absolute; left: 20px;
+}
+.friendsAddPopup .tabArea .friendsList button{
+    width: 50px;  height: 25px; line-height: 25px;
+    border-radius: 20px; background: #fdca6e;
+    font-size: 14px; font-weight: 700; color: #fff;
+    position: absolute; right: 20px; margin: 5px 0;
+}
+.mainPopup-area .friendsAddPopup .tabArea #tabAd ul{
+    overflow: hidden; display: inline-block; margin: 60px 0;
+}
+.friendsAddPopup .tabArea #tabAd li{ float: left; margin: 15px;}
+.friendsAddPopup .tabArea #tabAd .icon{width:50px; height: 50px;}
+.friendsAddPopup .tabArea #tabAd .icon-messageY{background-position: -870px -90px }
+.friendsAddPopup .tabArea #tabAd .icon-kakaoY{background-position: -990px -90px}
+.friendsAddPopup .tabArea #tabAd .icon-urlY{background-position: -1050px -90px}
+.friendsAddPopup .tabArea #tabAd li span{
+    font-size: 16px; font-weight: 700; display: block; margin: 10px 0;
+}
+
+/* 알람 팝업 */
+.mainPopup-area .alramPopup{
+    display: none;
+    text-align: center;
+}
+.alramPopup .wrap{
+    position: relative; padding: 20px;
+}
+.alramPopup .wrap h3{
+    font-size: 20px; font-weight: 800;
+    position: absolute; left: 0px;
+}
+.alramSwitch .on-off{ border: 1px solid #fdca6e }
+.alramSwitch .on-off span{ background: #fdca6e }
+.alramSwitch .on-off span.btn{ background: #fdca6e }
+.alramSwitch input:checked+label{    background: #fdca6e8a;}
+.alramSwitch input:checked+label span.btn{background: #fdca6e}
+
+.alramPopup .week{overflow: hidden; display: inline-block; margin: 15px 0;}
+.alramPopup .week li{float: left; margin: 5px;}
+.alramPopup .week a{
+    display: inline-block;
+    width: 35px; height: 35px;
+    border-radius: 20px;
+    border: 2px solid #6d5ce8;
+    color: #6d5ce8; font-size: 18px; font-weight: 800;
+    line-height: 35px;
+    box-sizing: border-box;
+}
+.alramPopup .week a.on{
+    background: #6d5ce8;
+    color: #fff; 
+}
+.alramPopup .time{height: 200px; text-align: center; }
+.alramPopup .time .swiper-container{height: 150px;}
+.alramPopup .time ul{overflow: hidden; display: inline-block;}
+.alramPopup .time li{float: left; width: 70px; }   
+
+.alramPopup .time .swiper-slide{text-align: center;}
+.alramPopup .time .swiper-slide.swiper-slide-active{transform: scale(1.3); color: #000; font-weight: 800;}
+.alramPopup .time .swiper-slide p{
+    font-size: 16px; width: 50px; height: 30px; 
+    display: inline-block; line-height: 30px; color: #747474;
+}
+
+
+/* ================= personal progress 페이지 하단 메뉴 팝업 ================= */
+/* 공통 */
+.personal-progressPopup{
+    /* display: none;    */
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+.personal-progressPopupBg{
+    display: none;
+    height: 100%; width:100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed; top: 0px;
+}
+.personal-progressPopup p{
+    font-size: 16px; margin: 10px 0;
+}
+.personal-progressPopup .popup{
+    width: 100%;
+    background: #fff;
+    padding: 40px 0;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.personal-progressPopup .remove{
+    display: none; 
+}
+.personal-progressPopup .reset{
+    display: none; 
+}
+.personal-progressPopup .eixt{
+    display: none; 
+}

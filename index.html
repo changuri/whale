@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>고래의 목표</title>   
+         
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/commom.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/swiper.min.js"></script>   
+    <script src="js/whale.js"></script>
+    <script>
+       
+    </script>
+</head>
+<body>        
+    <!-- 페이지 오픈닝 애니메이션 -->
+    <div class="opening">   
+        <i class="icon icon-openingBg"></i>         
+        <!-- 메인이미지 애니메이션 -->
+        <div class="ani">
+            <i class="icon icon-five"></i>
+            <i class="icon icon-music"></i>
+            <img src="img/mainWhale.gif"><span class="blind">메인이미지</span>
+        </div>
+        <i class="icon icon-mainTitle"><span class="blind">메인 타이틀</span></i>
+    </div>
+    <!-- 로그인 페이지 -->
+    <div class="login">
+        <h1 class="loginImg"> 
+            <i class="icon icon-loginImg"><span class="blind">로그인 타이틀</span></i>
+        </h1>
+        <div class="loginBox">
+            <ul class="loginSns">
+                <li><a href="#"><i class="icon icon-facebookW"></i></a></li>
+                <li><a href="#"><i class="icon icon-kakaoW"></i></a></li>
+                <li><a href="#"><i class="icon icon-naverW"></i></a></li>
+                <li><a href="#"><i class="icon icon-googleW"></i></a></li>
+            </ul>
+            <form class="loginForm"> <!-- main.html -->                   
+                <input type="text" id="id" placeholder="이메일 또는 닉네임">
+                <input type="password" id="password" placeholder="패스워드">
+                <button type="button" class="bigButton loginButton">로그인</button>
+            </form>
+            <div class="loginBtng">
+                <a href="#">회원가입</a>
+                <a href="#">ID/PW 찾기</a>
+            </div>
+        </div>
+    </div>  
+    <!-- 암호입력 페이지 -->
+    <div class="code-page"> 
+        <h1 class="codeImg"> 
+            <i class="icon icon-codeImg"><span class="blind">패스워드 타이틀</span></i>
+        </h1>
+        <div class="codeBox">
+            <h2>암호입력</h2>
+            <ul class="code">
+                <li><i class="icon icon-whalePs"></i><input type="password"></li>
+                <li><i class="icon icon-whalePs"></i><input type="password"></li>
+                <li><i class="icon icon-whalePs"></i><input type="password"></li>
+                <li><i class="icon icon-whalePs"></i><input type="password"></li>
+            </ul>                      
+            <p>네 자리 숫자를 입력해주세요.</p>
+        </div> 
+        <div class="btnNum">
+            <div class="btnNumg">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+            <div class="btnNumg">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+            </div>
+            <div class="btnNumg">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+            </div>
+            <div class="btnNumg">
+                <button class="text">삭제</button>
+                <button>0</button>
+                <button class="text">확인</button>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="loginPopup-area">
+        <!-- 회원가입 팝업 -->    
+        <div class="singUp">            
+            <a href="#" class="fas fa-times"></a> 
+            <h2>회원가입</h2>    
+            <p>SNS로 가입하기</p>        
+            <ul class="singUpSns">
+                <li><a href="#"><i class="icon icon-facebookP"></i></a></li>
+                <li><a href="#"><i class="icon icon-kakaoP"></i></a></li>
+                <li><a href="#"><i class="icon icon-naverP"></i></a></li>
+                <li><a href="#"><i class="icon icon-googleP"></i></a></li>
+            </ul>            
+            <div class="singUpNic">
+                <input type="text" id="nickNmae" placeholder="닉네임">
+                <button>중복확인</button>
+            </div>
+            <div class="singUpInfo">
+                <input type="text" id="email" placeholder="이메일">
+                <input type="text" id="password" placeholder="비밀번호">
+                <input type="text" id="passwordCheck" placeholder="비밀번호 확인">
+                <div class="text">
+                    계정을 만들면 고래의 목표의 <br>
+                    개인정보 수집방침, <br>   
+                    이용약관(마케팅 정보 수신정보 포함)에 <br>
+                    동의 하게됩니다.
+                </div>
+                <button class="bigButton" >가입하기</button>
+            </div>
+        </div>        
+
+        <!-- ID/PW찾기 팝업 -->
+        <div class="forgot-popup">
+            <a href="#" class="fas fa-times"></a> 
+            <div class="wrap forgotId">
+                <h2>ID 찾기</h2>
+                <p>입력하신 번호로 가입하신 이메일을 발송합니다.</p> 
+                <div class="textBox">                
+                    <input type="text" id="phone" placeholder="휴대폰 번호를 입력해주세요.">
+                    <button class="bigButton">이메일 발송</button>
+                </div>
+            </div>
+            <div class="wrap forgotdPw">
+                <h2>PW 찾기</h2>
+                <p>임시 비밀번호를 가입하신 이메일로 발송합니다.</p> 
+                <div class="textBox">
+                    <input type="text" id="phone" placeholder="이메일 주소를 입력해주세요.">
+                    <button class="bigButton">임시 비밀번호 발송</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+        
+        <!-- 회원가입/ID/PW찾기 알림 팝업 -->
+    <div class="loginsubPopup-area">
+        <div class="popup-bg"></div>
+        <div class="loginCheck-popup popup">
+            <p>회원가입이 완료되었습니다.</p>
+            <p>목표를 달성하고 춤추는<br> 고래를 만나보아요!</p>
+            <button class="midButton">로그인</button>
+        </div>
+
+        <div class="forgotId-popup popup">            
+            <p>입력하신 휴대전화로<br> 가입하신 이메일을 발송하였습니다.</p>
+            <p>확인 후 다시 로그인해주세요.</p>
+            <button class="midButton">확인</button>
+        </div>
+
+        <div class="forgotPw-popup popup">
+            <p>입력하신 이메일로 임시 비밀번호를<br>발송하였습니다.</p>
+            <p>확인 후 다시 로그인해주세요.</p>
+            <button class="midButton">확인</button>
+        </div>
+
+        <div class="forgotCode-popup popup">
+            <strong>암호분실</strong>
+            <p>비밀번호 입력 5회 오류</p>
+            <p>로그아웃 후 다시 로그인 하시면<br>암호 재설정이가능합니다.</p>
+            <div class="midButtonG">
+                <button class="midButton">취소</button>
+                <button class="midButton">로그아웃</button>
+            </div>        
+        </div>            
+    </div>
+    
+</body>
+</html> 
